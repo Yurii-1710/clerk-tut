@@ -1,11 +1,13 @@
 import { UserButton } from "@clerk/nextjs"
 import { auth } from "@clerk/nextjs/server"
 import Link from "next/link"
+import { checkUser } from "../../lib/checkUser"
 
 
-const Navbar = () => {
+const Navbar = async () => {
 
   const { userId } = auth()
+  const user = await checkUser()
 
   return (
     <div className="bg-cyan-950 rounded-b-xl">
