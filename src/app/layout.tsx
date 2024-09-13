@@ -7,7 +7,7 @@ import {
   ClerkProvider,
 
 } from '@clerk/nextjs'
-import { dark, neobrutalism, shadesOfPurple } from '@clerk/themes'
+import { dark } from '@clerk/themes'
 import Navbar from "../components/Navbar";
 
 const geistSans = localFont({
@@ -34,7 +34,6 @@ export default function RootLayout({
   return (
     <ClerkProvider appearance={{
       baseTheme: dark,
-      // signIn: { baseTheme: shadesOfPurple },
     }}>
       <html lang="en">
         <body

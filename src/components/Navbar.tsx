@@ -8,6 +8,7 @@ const Navbar = async () => {
 
   const { userId } = auth()
   const user = await checkUser()
+  console.log(user)
 
   return (
     <div className="bg-cyan-950 rounded-b-xl">
